@@ -80,15 +80,15 @@ export default function Header() {
         return headersData.map(({ label, href }) => {
         return (
             <Link
-            {...{
-                component: Link,
-                to: href,
-                color: "inherit",
-                style: { textDecoration: "none" },
-                key: label,
-            }}
-            >
-            <MenuItem>{label}</MenuItem>
+                {...{
+                    component: Link,
+                    to: href,
+                    color: "inherit",
+                    style: { textDecoration: "none" },
+                    key: label,
+                }}
+                >
+                <MenuItem>{label}</MenuItem>
             </Link>
         );
         });
@@ -128,9 +128,9 @@ export default function Header() {
                             open: drawerOpen,
                             onClose: handleDrawerClose
                         }}
-                        
+                        className={drawerContainer}
                     >
-                        <div className={drawerContainer}>{getDrawerChoices()}</div>
+                        <div>{getDrawerChoices()}</div>
                     </Drawer>
 
                     <Hidden mdUp>
@@ -154,7 +154,6 @@ export default function Header() {
                                 <div>{getMenuButtons()}</div>
                             </Box>
                         </Hidden>
-
                     </Box>
                 </Toolbar>
 
